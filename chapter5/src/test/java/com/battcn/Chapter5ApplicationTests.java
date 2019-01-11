@@ -32,7 +32,7 @@ public class Chapter5ApplicationTests {
     public void test1() throws Exception {
         final User user = userRepository.save(new User("u1", "p1"));
         log.info("[添加成功] - [{}]", user);
-        final List<User> u1 = userRepository.findAllByUsername("u1");
+        final List<User> u1 = userRepository.findAllByUserName("u1");
         log.info("[条件查询] - [{}]", u1);
         Pageable pageable = PageRequest.of(0, 10, Sort.by(Sort.Order.desc("username")));
         final Page<User> users = userRepository.findAll(pageable);

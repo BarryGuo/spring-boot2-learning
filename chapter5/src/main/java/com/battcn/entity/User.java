@@ -15,8 +15,8 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-    private String password;
+    private String userName;
+    private String passWord;
     /**
      * TODO 忽略该字段的映射
      */
@@ -34,19 +34,19 @@ public class User implements Serializable {
     }
 
     public String getUsername() {
-        return username;
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
-        return password;
+        return passWord;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getEmail() {
@@ -60,23 +60,23 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public User(String userName, String passWord) {
+        this.userName = userName;
+        this.passWord = passWord;
     }
 
-    public User(Long id, String username, String password) {
+    public User(Long id, String userName, String passWord) {
         this.id = id;
-        this.username = username;
-        this.password = password;
+        this.userName = userName;
+        this.passWord = passWord;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", userName='" + userName + '\'' +
+                ", passWord='" + passWord + '\'' +
                 '}';
     }
 }
